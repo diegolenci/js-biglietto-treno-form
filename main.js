@@ -15,6 +15,9 @@ btn.addEventListener('click', function(){
     bigliettoFinale.classList.add('show')
 
     const nomePasseggero = document.getElementById('nome-passeggero')
+    const carrozza = document.getElementById('carrozza')
+    const codice = document.getElementById('codice')
+    
     nomePasseggero.innerHTML = nome
 
     const offerta = document.getElementById('offerta')
@@ -26,7 +29,14 @@ btn.addEventListener('click', function(){
     } else {
         offerta.innerHTML = "Biglietto over 65"
     }
+
+    carrozza.innerHTML = randomNumber(1,99)
+    codice.innerHTML = randomNumber(1.99)
 })
+
+function randomNumber(min,max){
+    Math.floor(Math.random() * max) + min
+}
 
 
 
